@@ -6,7 +6,14 @@
 
 ### React Hooks
 
+### React Strict Mode 
+
+This deal with the strict mode 
+
 ### React Lifecycle
+
+### Hooks lifecycle 
+
 ### React Context Api
 ### React Design Pattern
 
