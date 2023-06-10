@@ -14,7 +14,7 @@
 ## React Router
 
 
-### Introduction and BroserRouter
+### Introduction and BrowserRouter
 This notes cover **v6** version and its
 
 
