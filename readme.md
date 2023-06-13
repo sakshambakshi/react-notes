@@ -2,11 +2,23 @@
 
 
 ## React Topic
+### React Strict Mode 
+
+The React library provides us with the <StrictMode></StrictMode> component it does give you extra warning on the common bugs.
+
+In the **dev env** ~~not in **production env**~~ it adds these kind of behaviour:
+
+- It re-renders a component with extra time so that to detect impure rendering . 
+- It runs a **useEffect** with extra time to find out the whether you are cleaning up the component.
+- It will be check and warn whether you are using the depricated API'S .
+
+### React Pure And Impure Componenet
 
 ### React Ref
 #### React Foward Ref
 
-    Just consider if you want Componnet areound Text input element and suddenly you find the task or case in which from its parent element you want to controll input element lets just say you want to focus it so with the help of fowardRef a Custom component can take a ref and tag it on that DOM Element and you can controll you element (Input element in this case)  thinking it like you are fowarding your **REF** to nested componnet and contoll its html element from your parent 
+Just consider if you want Componnet areound Text input element and suddenly you find the task or case in which from its parent element you want to controll input element lets just say you want to focus it so with the help of fowardRef a Custom component can take a ref and tag it on that DOM Element and you can controll you element (Input element in this case)  thinking it like you are fowarding your **REF** to nested componnet and contoll its html element from your parent.
+
 ### React Hooks
 
 
@@ -14,9 +26,11 @@
 ### React Portal
 
 
-### React Strict Mode 
 
-This deal with the strict mode 
+
+
+
+
 
 ### React Lifecycle
 
@@ -133,7 +147,6 @@ These used to group the Route
 
 
 </Route>
-
 ```
 
 ### useSearchParams() 
@@ -162,6 +175,16 @@ This is used to programitically navigate to a different page
 
 ---
 
+### useRoutes()
+
+
+
+### Learn about Nested Routes
+---
+
+### Learn about Recursion Routes 
+
+---
 ## Redux
 
 ### Redux Saga
