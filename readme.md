@@ -236,3 +236,24 @@ export function* getAllProduct(){
 
 
 ## React query
+#### Some common pratices
+
+- https://kentcdodds.com/blog/stop-using-isloading-booleans
+- https://react.dev/blog/2022/03/29/react-v18#new-feature-automatic-batching
+- Error ErrorBoundary
+Production deploy
+
+You might notice that with the changes we've added, we now cannot recover from an error. For example:
+
+Type an incorrect pokemon
+Notice the error
+Type a correct pokemon
+Notice it doesn't show that new pokemon's information
+The reason this is happening is because the error that's stored in the internal state of the ErrorBoundary component isn't getting reset, so it's not rendering the children we're passing to it.
+
+So what we need to do is reset the ErrorBoundary's error state to null so it will re-render. But how do we access the internal state of our ErrorBoundary to reset it? Well, there are a few ways we could do this by modifying the ErrorBoundary, but one thing you can do when you want to reset the state of a component, is by providing it a key prop which can be used to unmount and re-mount a component.
+
+- reset error boundary
+- https://kentcdodds.com/blog/dont-sync-state-derive-it
+---
+
