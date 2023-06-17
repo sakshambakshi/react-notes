@@ -255,5 +255,7 @@ So what we need to do is reset the ErrorBoundary's error state to null so it wil
 
 - reset error boundary
 - https://kentcdodds.com/blog/dont-sync-state-derive-it
+- https://github.com/reactwg/react-18/discussions/21
+- https://kentcdodds.com/blog/inversion-of-control
 ---
 
