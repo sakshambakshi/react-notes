@@ -1,7 +1,62 @@
-**Table of Contents**
+- [React Topic](#react-topic)
+  - [Props Type Validation Example](#props-type-validation-example)
+  - [React Strict Mode](#react-strict-mode)
+  - [React Pure And Impure Componenet](#react-pure-and-impure-componenet)
+  - [React Ref](#react-ref)
+    - [React Foward Ref](#react-foward-ref)
+  - [React Hooks](#react-hooks)
+  - [React Portal](#react-portal)
+  - [React Lifecycle](#react-lifecycle)
+  - [Hooks lifecycle](#hooks-lifecycle)
+  - [React Context Api](#react-context-api)
+  - [React Design Pattern](#react-design-pattern)
+  - [React Error Handling](#react-error-handling)
+- [React Router](#react-router)
+  - [Introduction and BrowserRouter](#introduction-and-browserrouter)
+  - [Immer js](#immer-js)
+  - [Types of Router](#types-of-router)
+  - [Route](#route)
+  - [Routes](#routes)
+  - [Type of Router](#type-of-router)
+  - [Outlet](#outlet)
+  - [useSearchParams()](#usesearchparams)
+  - [Navigate](#navigate)
+  - [useNavigate()](#usenavigate)
+  - [useRoutes()](#useroutes)
+  - [Learn about Nested Routes](#learn-about-nested-routes)
+  - [Learn about Recursion Routes](#learn-about-recursion-routes)
+- [Redux](#redux)
+  - [Redux Saga](#redux-saga)
+  - [Redux Toolkit](#redux-toolkit)
+  - [Redux Helmet](#redux-helmet)
+  - [Redux Thunk](#redux-thunk)
+- [React query](#react-query)
+    - [Some common pratices](#some-common-pratices)
 
 
+---
 ## React Topic
+
+### Props Type Validation Example
+
+```js
+function Message({message}){
+    return (
+        <div className="message">{message}</div>
+    )
+}
+
+Message.propTypes = {
+    message(props , prop , componentName){
+
+    }
+} 
+// prop-types
+Message.propTypes = {
+    message: PropTypes.string
+}
+```
+
 ### React Strict Mode 
 
 The React library provides us with the <StrictMode></StrictMode> component it does give you extra warning on the common bugs.
