@@ -1,10 +1,12 @@
 - [React Topic](#react-topic)
+  - [React State Management](#react-state-management)
   - [Props Type Validation Example](#props-type-validation-example)
   - [React Strict Mode](#react-strict-mode)
   - [React Pure And Impure Componenet](#react-pure-and-impure-componenet)
   - [React Ref](#react-ref)
     - [React Foward Ref](#react-foward-ref)
   - [React Hooks](#react-hooks)
+  - [React Hook flow](#react-hook-flow)
   - [React Portal](#react-portal)
   - [React Lifecycle](#react-lifecycle)
   - [Hooks lifecycle](#hooks-lifecycle)
@@ -37,6 +39,9 @@
 ---
 ## React Topic
 
+### React State Management
+state-colocation https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster
+
 ### Props Type Validation Example
 
 ```js
@@ -53,7 +58,7 @@ Message.propTypes = {
 } 
 // prop-types
 Message.propTypes = {
-    message: PropTypes.string
+    message: PropTypes.string 
 }
 ```
 
@@ -76,6 +81,9 @@ Just consider if you want Componnet areound Text input element and suddenly you 
 
 ### React Hooks
 
+
+### React Hook flow
+https://egghead.io/lessons/react-understand-the-react-hook-flow
 
 
 ### React Portal
