@@ -324,4 +324,18 @@ So what we need to do is reset the ErrorBoundary's error state to null so it wil
 - https://www.youtube.com/watch?v=XNT5BozA9HA
 - https://www.youtube.com/watch?v=MSq_DCRxOxw
 ---
-
+Topic to study
+ Module compnen
+ Closure in react
+ Redux vs context apo
+ Redux workflow
+ Action creator
+ Middleware in redix
+ Axios interceptor
+ Private route
+ Protected
+ 5 vs 6 react router dom difference
+ Error boundary
+ What architure react  is used (flux)
+ Reconcilatoon
+ Performance manataince in react
