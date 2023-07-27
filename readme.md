@@ -253,7 +253,7 @@ This is used to programitically navigate to a different page
 
 ---
 ## Redux
-
+![redux-lifecycle](./images/reduxLifecycle.gif)
 ### Redux Saga
 [Docs](https://redux-saga.js.org/)
 
