@@ -28,6 +28,13 @@
   - [Learn about Nested Routes](#learn-about-nested-routes)
   - [Learn about Recursion Routes](#learn-about-recursion-routes)
 - [Redux](#redux)
+  - [Action](#action)
+    - [Action Creator](#action-creator)
+    - [Middleware](#middleware)
+      - [Currying](#currying)
+    - [Reducers](#reducers)
+      - [Combine Reducer](#combine-reducer)
+    - [Suscriber](#suscriber)
   - [Redux Saga](#redux-saga)
   - [Redux Toolkit](#redux-toolkit)
   - [Redux Helmet](#redux-helmet)
@@ -255,6 +262,111 @@ This is used to programitically navigate to a different page
 ---
 ## Redux
 ![redux-lifecycle](./images/reduxLifecycle.gif)
+
+So in the case of **Redux**  we need to remember these concepts
+### Action 
+So what happens in the case of **action** is that they are dispatch like for example.
+```js
+// all the action name will be at one place 
+const ADD_TODO = 'ADD_TODO'
+
+const AddTodoAction = {
+    type: ADD_TODO,
+    payload: {
+        todoName: "Text",
+        id: "1232ASDJDJ22",
+        status: "un-completed",
+    }
+}
+
+store.dispatch(AddTodoAction);
+
+function Todo(state = [], action) {
+    /**
+     * This must be a pure function
+     */
+    switch (action.type) {
+
+        case ADD_TODO:
+            return state.concat(action.payload)
+        default:
+            return state
+
+    }
+}
+
+
+function goal() {
+    /**
+     * Another Reducer
+     */
+
+
+
+}
+
+
+const dummyMiddleWareWithThunk = (store) => (next) => (action) => {
+    // midlle ware with curring
+    console.log({ store, next, action })
+
+    if (typeof action === 'function') {
+    // thunk
+        return action(store.dispatch);
+        // can be use for async action creator
+
+    }
+    return next(action)
+}
+
+const store = Redux.createStore(Redux.combineReducer({
+    Todo,
+    goal
+}),Redux.applyMiddleware(dummyMiddleWareWithThunk))
+
+
+```
+#### Action Creator
+In the example above you saw that you are passing the action via object , for the sake of abstration 
+```js
+function addTodoActionCreator({todoName}){
+    return ({
+        type: ADD_TODO,
+        payload:{
+            todoName,
+            id:generateTodo(),
+            toggleState: false
+
+        }
+    })
+
+}
+
+store.dispatch(addTodoActionCreator({todoName:'Buy Food'}))
+```  
+#### Middleware
+```js
+function addTodoPresist({ todoName }) {
+    return function (dispatch) {
+        const newTodo = addTodoActionCreator()
+        dispatch(newTodo)
+
+        API.saveTodo(newTodo.payload).catch(
+            (err) =>{
+                dispatch(removeTodo({todoId: newTodo.payload.id}))
+
+            }
+        )
+
+    }
+}
+```  
+##### Currying
+#### Reducers
+So the reducers in the given example is a pure function which mutates the states are called via action dispatched.
+##### Combine Reducer
+It combines all the reducers to one as it's broken down **slices** 
+#### Suscriber
 ### Redux Saga
 [Docs](https://redux-saga.js.org/)
 
