@@ -37,6 +37,7 @@
     - [Suscriber](#suscriber)
   - [Redux Saga](#redux-saga)
   - [Redux Toolkit](#redux-toolkit)
+  - [slice](#slice)
   - [Redux Helmet](#redux-helmet)
   - [Redux Thunk](#redux-thunk)
 - [React query](#react-query)
@@ -404,6 +405,23 @@ export function* getAllProduct(){
 
 
 ### Redux Toolkit
+
+The redux toool kit came after the react announce the support for hooks and redux had to re-architute its api to provide the hooks support.
+
+The reduc had had lot of the boilerplate code there  hare kind of **complexity** :
+- Inherit complexeity
+- Incident Complexity
+  The redux used to had inherit complexity its had a way to do things like the proper step to update date rather than diretly mutating it so that it provide a **time machine** kind of functionality.
+
+  The redux toolkit provides solution this inherit complexity for example it uses library called **immer** it lets you muatte state and behind the scences it creates **new copy of object**.
+
+  ### slice
+  The whole redux toolkit application is breaken down   into modules and each slice has its own
+  - initial state
+  - reducers
+  - async **thunk**
+  - extra
+- 
 
 ### Redux Helmet
 
