@@ -38,6 +38,7 @@
   - [Redux Saga](#redux-saga)
   - [Redux Toolkit](#redux-toolkit)
   - [slice](#slice)
+  - [Redux Toolkit Query](#redux-toolkit-query)
   - [Redux Helmet](#redux-helmet)
   - [Redux Thunk](#redux-thunk)
 - [React query](#react-query)
@@ -416,12 +417,21 @@ The reduc had had lot of the boilerplate code there  hare kind of **complexity**
   The redux toolkit provides solution this inherit complexity for example it uses library called **immer** it lets you muatte state and behind the scences it creates **new copy of object**.
 
   ### slice
-  The whole redux toolkit application is breaken down   into modules and each slice has its own
+  The whole redux toolkit application is breaken down into modules and each slice has its own
   - initial state
   - reducers
   - async **thunk**
   - extra
-- 
+  
+It provides **great type support** and  it's does all the inherit complexity behind the scene and brings the consistency in the code.Like:
+- provide the inherit support of the **abortcontroller** ;
+-  automatically setup for the redux devtool ,
+-   dealing with async logic **thunk**;
+-   proper way of handling middleware ;
+
+### Redux Toolkit Query
+Now a days modern library like **react query** come up from the idea from just **state management** to the **server data fetching and data caching**. The redux toolkit provides the same solution
+  
 
 ### Redux Helmet
 
